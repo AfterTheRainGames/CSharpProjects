@@ -1,0 +1,22 @@
+public class Solution {
+    public bool IsPalindrome(int x) {
+        
+        int og = x;
+        int result = 0;
+
+        if(og <0)
+        {
+            return false;
+        }
+
+        while(x != 0)
+        {
+            int digit = x % 10;
+            result = result * 10 + digit;
+            x = x/10;
+        }
+
+        return result == og;
+
+    }
+}

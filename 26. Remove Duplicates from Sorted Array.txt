@@ -1,0 +1,20 @@
+public class Solution {
+    public int RemoveDuplicates(int[] nums) {
+        
+        List<int> originals = new List<int>();
+
+        foreach (int number in nums)
+        {
+            if(!originals.Contains(number))
+            {
+                originals.Add(number);
+            }
+        }
+
+        for(int i = 0; i < originals.Count; i++)
+        {
+            nums[i] = originals[i];
+        }
+        return originals.Count;
+    }
+}
